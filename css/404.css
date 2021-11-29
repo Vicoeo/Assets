@@ -1,0 +1,137 @@
+a{ text-decoration:none} 
+a:hover{ text-decoration:none}
+
+body {
+  background: fixed linear-gradient(to right bottom, #00BBFF,#33CCFF, #00a1ba, #01b18e, #32b37b);
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-flow: row wrap;
+  align-content: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+}
+
+div {
+  width: 100%;
+  text-align: center;
+}
+
+.number {
+  color: #FFDDAA; 
+  position: relative;
+  font: 900 30vmin 'Consolas';
+  letter-spacing: 5vmin;
+  text-shadow: 2px -1px 0 #000, 4px -2px 0 #0a0a0a, 6px -3px 0 #0f0f0f, 8px -4px 0 #141414, 10px -5px 0 #1a1a1a, 12px -6px 0 #1f1f1f, 14px -7px 0 #242424, 16px -8px 0 #292929;
+}
+@-webkit-keyframes moving {
+  to {
+    background-position: 100vmin 20vmin, -100vmin -25vmin;
+  }
+}
+@keyframes moving {
+  to {
+    background-position: 100vmin 20vmin, -100vmin -25vmin;
+  }
+}
+.text {
+  font: 400 5vmin "Courgette";
+}
+.text span {
+  font-size: 10vmin;
+}
+
+button {
+	border: none;
+	padding: 1em;
+	outline: none;
+	color: white;
+	text-transform: uppercase;
+	font-weight: 900;
+	font-style: 1.2em;
+	letter-spacing: 0.2em;
+	position: relative;
+	z-index: 1;
+	cursor: pointer;
+	background: none;
+}
+
+button:before, button:after {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	border-radius: 10em;
+	-webkit-transform: translateX(-50%) translateY(-50%);
+	transform: translateX(-50%) translateY(-50%);
+	width: 105%;
+	height: 105%;
+	content: '';
+	z-index: -2;
+	background-size: 400% 400%;
+	background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+}
+
+button:before {
+	-webkit-filter: blur(7px);
+	filter: blur(7px);
+	transition: all .25s ease;
+	-webkit-animation: pulse 10s infinite ease;
+	animation: pulse 10s infinite ease;
+}
+
+button:after {
+	-webkit-filter: blur(0.3px);
+	filter: blur(0.3px);
+}
+
+button:hover:before {
+	width: 115%;
+	height: 115%;
+}
+
+.footer {
+	width: 100%;
+	color: #fff;
+	float: left;
+	text-align: center;
+	position: fixed;
+	bottom: 0;
+	margin-bottom: 5px;
+	margin-top: -50px;
+	height: 50px;
+}
+
+@-webkit-keyframes pulse {
+	from {
+		-webkit-filter: blur(7px);
+		filter: blur(7px);
+	}
+
+	50% {
+		-webkit-filter: blur(10px);
+		filter: blur(10px);
+	}
+
+	to {
+		-webkit-filter: blur(7px);
+		filter: blur(7px);
+	}
+}
+
+@keyframes pulse {
+	from {
+		-webkit-filter: blur(7px);
+		filter: blur(7px);
+	}
+
+	50% {
+		-webkit-filter: blur(10px);
+		filter: blur(10px);
+	}
+
+	to {
+		-webkit-filter: blur(7px);
+		filter: blur(7px);
+	}
+}
